@@ -1,19 +1,31 @@
 instructors:
-  - name: Albus Dumbledore
-    profile_pic: /_images/pp/dumbledore.jpg
-    webpage: https://en.wikipedia.org/wiki/Albus_Dumbledore
-  - name: Minerva McGonagall
-    profile_pic: /_images/pp/mcgonagall.jpg
+  - name: Dr. Masoud Asadpour
+    profile_pic: /_images/pp/Masoud-Asadpour.jpg
+    webpage: https://scholar.google.com/citations?user=MKwwcvIAAAAJ&hl=en
 
 teaching_assistants:
-  - name: Harry Potter
-    profile_pic: /_images/pp/potter.jpg
+  - name: Farzad Jannati
+    profile_pic: /_images/pp/Farzad.jpg
+    role: "Chief TA"
     webpage: https://en.wikipedia.org/wiki/Harry_Potter_(character)
 
-  - name: Hermione Granger
-    profile_pic: /_images/pp/granger.jpg
+  - name: Faezeh Mozaffari
+    profile_pic: /_images/pp/Faeze.jpg
+    role: "Chief TA"
     webpage: https://en.wikipedia.org/wiki/Hermione_Granger
 
-  - name: Ron Weasley
-    profile_pic: /_images/pp/weasley.jpg
+
+  - name: Alireza Koohzad
+    profile_pic: /_images/pp/Alireza.jpg
+    role: "TA"
+    webpage: https://en.wikipedia.org/wiki/Ron_Weasley
+
+  - name: Omid Moollaei
+    profile_pic: /_images/pp/Omid.jpg
+    role: "TA"
+    webpage: https://en.wikipedia.org/wiki/Ron_Weasley
+    
+  - name: Amin Motamedi
+    profile_pic: /_images/pp/Amin.jpg
+    role: "TA"
     webpage: https://en.wikipedia.org/wiki/Ron_Weasley
