@@ -278,14 +278,13 @@ ul#archive li.alt {
        background: #f6f6f6;
 }
 
-.archiveposturl {
-       display: block;
-
-       color: #333;
+.archiveposturl a {
+  color: #0056b3; 
+  text-decoration: none;
 }
 
 .archiveposturl:hover {
-
+  color: #004080;
 }
 
 ul#archive li span a {
