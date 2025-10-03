@@ -1,36 +1,45 @@
 instructors:
   - name: Dr. Masoud Asadpour
     profile_pic: /_images/pp/Masoud-Asadpour.jpg
-    webpage: https://scholar.google.com/citations?user=MKwwcvIAAAAJ&hl=en
-
+    google_scholar: https://scholar.google.com/citations?user=MKwwcvIAAAAJ&hl=en
+    linkedin: # Add LinkedIn URL here if available
+    
 teaching_assistants:
   - name: Farzad Jannati
     profile_pic: /_images/pp/Farzad.jpg
     role: "Chief TA"
-    webpage: https://en.wikipedia.org/wiki/Harry_Potter_(character)
+    github: https://github.com/username # Replace with actual GitHub
+    linkedin: https://linkedin.com/in/username 
+ 
 
   - name: Faezeh Mozaffari
     profile_pic: /_images/pp/Faeze.jpg
     role: "Chief TA"
-    webpage: https://en.wikipedia.org/wiki/Hermione_Granger
+    github: https://en.wikipedia.org/wiki/Hermione_Granger
+    linkedin: https://linkedin.com/in/username 
+
 
 
   - name: Alireza Koohzad
     profile_pic: /_images/pp/Alireza.jpg
     role: "TA"
-    webpage: https://en.wikipedia.org/wiki/Ron_Weasley
+    github: https://en.wikipedia.org/wiki/Ron_Weasley
+    linkedin: https://linkedin.com/in/username 
 
   - name: Amir Hossein Roshandel
     profile_pic: /_images/pp/Roshandel.jpg
     role: "TA"
-    webpage: https://en.wikipedia.org/wiki/Ron_Weasley
+    github: https://github.com/roshandelamirhossein
+    linkedin: https://linkedin.com/in/username 
 
   - name: Omid Moollaei
     profile_pic: /_images/pp/Omid.jpg
     role: "TA"
-    webpage: https://en.wikipedia.org/wiki/Ron_Weasley
-    
+    github: https://en.wikipedia.org/wiki/Ron_Weasley
+    linkedin: https://linkedin.com/in/username 
+
   - name: Amin Motamedi
     profile_pic: /_images/pp/Amin.jpg
     role: "TA"
-    webpage: https://en.wikipedia.org/wiki/Ron_Weasley
+    github: https://en.wikipedia.org/wiki/Ron_Weasley
+    linkedin: https://linkedin.com/in/username 
