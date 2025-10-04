@@ -42,6 +42,13 @@ layout: default
                              class="member-image">
                         <div class="member-overlay">
                             <div class="social-links">
+                                {% if ins.email and ins.email != "" %}
+                                <a href="mailto:{{ ins.email }}" class="social-link email-link" title="Email">
+                                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
+                                    </svg>
+                                </a>
+                                {% endif %}
                                 {% if ins.google_scholar and ins.google_scholar != "" %}
                                 <a href="{{ ins.google_scholar }}" target="_blank" class="social-link scholar-link" title="Google Scholar">
                                     <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -69,14 +76,6 @@ layout: default
                     <div class="member-info">
                         <h3 class="member-name">{{ins.name}}</h3>
                         <p class="member-role">Instructor</p>
-                        <div class="member-links">
-                            {% if ins.google_scholar and ins.google_scholar != "" %}
-                            <a href="{{ ins.google_scholar }}" target="_blank" class="text-link">Google Scholar</a>
-                            {% endif %}
-                            {% if ins.linkedin and ins.linkedin != "" %}
-                            <a href="{{ ins.linkedin }}" target="_blank" class="text-link">LinkedIn</a>
-                            {% endif %}
-                        </div>
                     </div>
                 </div>
                 {% endfor %}
@@ -104,6 +103,13 @@ layout: default
                                  class="member-image">
                             <div class="member-overlay">
                                 <div class="social-links">
+                                    {% if ta.email and ta.email != "" %}
+                                    <a href="mailto:{{ ta.email }}" class="social-link email-link" title="Email">
+                                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
+                                        </svg>
+                                    </a>
+                                    {% endif %}
                                     {% if ta.github and ta.github != "" %}
                                     <a href="{{ ta.github }}" target="_blank" class="social-link github-link" title="GitHub">
                                         <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -125,14 +131,6 @@ layout: default
                         <div class="member-info">
                             <h3 class="member-name">{{ta.name}}</h3>
                             <p class="member-role">{{ta.role}}</p>
-                            <div class="member-links">
-                                {% if ta.github and ta.github != "" %}
-                                <a href="{{ ta.github }}" target="_blank" class="text-link">GitHub</a>
-                                {% endif %}
-                                {% if ta.linkedin and ta.linkedin != "" %}
-                                <a href="{{ ta.linkedin }}" target="_blank" class="text-link">LinkedIn</a>
-                                {% endif %}
-                            </div>
                         </div>
                     </div>
                     {% endfor %}
@@ -154,6 +152,13 @@ layout: default
                                  class="member-image">
                             <div class="member-overlay">
                                 <div class="social-links">
+                                    {% if ta.email and ta.email != "" %}
+                                    <a href="mailto:{{ ta.email }}" class="social-link email-link" title="Email">
+                                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
+                                        </svg>
+                                    </a>
+                                    {% endif %}
                                     {% if ta.github and ta.github != "" %}
                                     <a href="{{ ta.github }}" target="_blank" class="social-link github-link" title="GitHub">
                                         <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -174,14 +179,6 @@ layout: default
                         <div class="member-info">
                             <h3 class="member-name">{{ta.name}}</h3>
                             <p class="member-role">Teaching Assistant</p>
-                            <div class="member-links">
-                                {% if ta.github and ta.github != "" %}
-                                <a href="{{ ta.github }}" target="_blank" class="text-link">GitHub</a>
-                                {% endif %}
-                                {% if ta.linkedin and ta.linkedin != "" %}
-                                <a href="{{ ta.linkedin }}" target="_blank" class="text-link">LinkedIn</a>
-                                {% endif %}
-                            </div>
                         </div>
                     </div>
                     {% endfor %}
@@ -318,65 +315,73 @@ layout: default
     align-items: center;
 }
 
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
 .social-link {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    text-decoration: none;
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .social-link:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3);
     transform: scale(1.1);
 }
 
 .social-icon {
     width: 20px;
     height: 20px;
-    color: white;
 }
 
-.github-link:hover {
-    background: #333;
-    border-color: #333;
-}
-
-.linkedin-link:hover {
-    background: #0077b5;
-    border-color: #0077b5;
+/* Email Link Styling */
+.email-link:hover {
+    background: #e74c3c;
 }
 
 .scholar-link:hover {
     background: #4285f4;
-    border-color: #4285f4;
+}
+
+.linkedin-link:hover {
+    background: #0077b5;
+}
+
+.github-link:hover {
+    background: #333;
 }
 
 .webpage-link:hover {
-    background: #ff6b6b;
-    border-color: #ff6b6b;
+    background: #2c3e50;
 }
 
-/* Chief Badge */
+/* Chief TA Badge */
 .chief-badge {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: #28a745;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
     color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Member Info Styles */
+/* Member Info */
 .member-info {
     padding: 1.2rem;
     text-align: center;
@@ -384,85 +389,58 @@ layout: default
 
 .member-name {
     font-size: 1.1rem;
-    margin: 0 0 0.5rem 0;
-    color: #333;
     font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
 }
 
 .member-role {
-    margin: 0 0 0.8rem 0;
-    color: #666;
     font-size: 0.9rem;
-    font-style: italic;
-}
-
-/* Text Links */
-.member-links {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.text-link {
-    font-size: 0.85rem;
-    color: #007bff;
-    text-decoration: none;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.text-link:hover {
-    background: #f0f0f0;
-    color: #0056b3;
+    color: #7f8c8d;
+    margin: 0;
+    font-weight: 500;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .team-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: 1fr;
         gap: 1rem;
-    }
-    
-    .instructors-grid {
-        max-width: 100%;
-    }
-    
-    .chief-tas-grid {
-        max-width: 100%;
     }
     
     .section-title {
         font-size: 1.5rem;
     }
     
+    .subsection-title {
+        font-size: 1.2rem;
+    }
+    
+    .member-image {
+        height: 160px; /* Further reduced for mobile */
+    }
+    
+    .social-links {
+        gap: 0.8rem;
+    }
+    
     .social-link {
         width: 35px;
         height: 35px;
     }
-    
-    .social-icon {
-        width: 18px;
-        height: 18px;
+}
+
+@media (max-width: 480px) {
+    .member-image {
+        height: 140px; /* Even smaller for very small screens */
     }
-}
-
-/* Additional Hover Effects */
-.instructor-card:hover {
-    border-color: #0056b3;
-}
-
-.chief-ta-card:hover {
-    border-color: #218838;
-}
-
-.ta-card:hover {
-    border-color: #007bff;
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
+    
+    .member-info {
+        padding: 1rem;
+    }
+    
+    .member-name {
+        font-size: 1rem;
+    }
 }
 </style>

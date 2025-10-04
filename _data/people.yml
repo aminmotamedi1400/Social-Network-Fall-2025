@@ -10,6 +10,7 @@ teaching_assistants:
     role: "Chief TA"
     github: https://github.com/username # Replace with actual GitHub
     linkedin: https://linkedin.com/in/username 
+    email: test@gmial.com
  
 
   - name: Faezeh Mozaffari
@@ -17,7 +18,7 @@ teaching_assistants:
     role: "Chief TA"
     github: https://en.wikipedia.org/wiki/Hermione_Granger
     linkedin: https://linkedin.com/in/username 
-
+    email: test@gmial.com
 
 
   - name: Alireza Koohzad
@@ -25,21 +26,27 @@ teaching_assistants:
     role: "TA"
     github: https://en.wikipedia.org/wiki/Ron_Weasley
     linkedin: https://linkedin.com/in/username 
+    email: test@gmial.com
 
   - name: Amir Hossein Roshandel
     profile_pic: /_images/pp/Roshandel.jpg
     role: "TA"
     github: https://github.com/roshandelamirhossein
-    linkedin: https://linkedin.com/in/username 
+    linkedin: https://www.linkedin.com/in/amir-hossein-roshandel-0ab09a138/
+    email: roshandel2004@gmail.com
 
   - name: Omid Moollaei
     profile_pic: /_images/pp/Omid.jpg
     role: "TA"
     github: https://en.wikipedia.org/wiki/Ron_Weasley
     linkedin: https://linkedin.com/in/username 
+    email: test@gmial.com
 
   - name: Amin Motamedi
     profile_pic: /_images/pp/Amin.jpg
     role: "TA"
     github: https://en.wikipedia.org/wiki/Ron_Weasley
     linkedin: https://linkedin.com/in/username 
+    email: test@gmial.com
+
+    
