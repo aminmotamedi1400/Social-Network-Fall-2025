@@ -2,31 +2,33 @@ instructors:
   - name: Dr. Masoud Asadpour
     profile_pic: /_images/pp/Masoud-Asadpour.jpg
     google_scholar: https://scholar.google.com/citations?user=MKwwcvIAAAAJ&hl=en
-    linkedin: # Add LinkedIn URL here if available
+    linkedin: https://linkedin.com/in/masoud-asadpour-52abab89
+    email: asadpour@ut.ac.ir
+
     
 teaching_assistants:
   - name: Farzad Jannati
     profile_pic: /_images/pp/Farzad.jpg
     role: "Chief TA"
-    github: https://github.com/username # Replace with actual GitHub
-    linkedin: https://linkedin.com/in/username 
-    email: test@gmial.com
+    github: https://github.com/farzadjannati
+    linkedin: https://www.linkedin.com/in/farzadjannati
+    email: farzadjnty@gmail.com
  
 
   - name: Faezeh Mozaffari
     profile_pic: /_images/pp/Faeze.jpg
     role: "Chief TA"
-    github: https://en.wikipedia.org/wiki/Hermione_Granger
-    linkedin: https://linkedin.com/in/username 
-    email: test@gmial.com
+    github: https://github.com/faezehmzf
+    linkedin: https://linkedin.com/in/faezeh-mozaffari-7816b6230
+    email: faezeh.m7899@gmail.com
 
 
   - name: Alireza Koohzad
     profile_pic: /_images/pp/Alireza.jpg
     role: "TA"
-    github: https://en.wikipedia.org/wiki/Ron_Weasley
-    linkedin: https://linkedin.com/in/username 
-    email: test@gmial.com
+    github: https://github.com/Alireza-Koohzad
+    linkedin: https://linkedin.com/in/alireza-koohzad-81b667217
+    email: alirezakoohzad2705@gmail.com
 
   - name: Amir Hossein Roshandel
     profile_pic: /_images/pp/Roshandel.jpg
@@ -36,17 +38,17 @@ teaching_assistants:
     email: roshandel2004@gmail.com
 
   - name: Omid Moollaei
-    profile_pic: /_images/pp/Omid.jpg
+    profile_pic: /_images/pp/Omid.png
     role: "TA"
-    github: https://en.wikipedia.org/wiki/Ron_Weasley
-    linkedin: https://linkedin.com/in/username 
-    email: test@gmial.com
+    github: https://github.com/omidmollaei
+    linkedin: https://linkedin.com/in/omid-mollaei-4670b4222
+    email: mollaei.om@gmail.com
 
   - name: Amin Motamedi
     profile_pic: /_images/pp/Amin.jpg
     role: "TA"
-    github: https://en.wikipedia.org/wiki/Ron_Weasley
-    linkedin: https://linkedin.com/in/username 
-    email: test@gmial.com
+    github: https://github.com/aminmotamedi1400
+    linkedin: https://linkedin.com/in/m-amin-motamedi
+    email: aminmotamedi101@gmail.com
 
     

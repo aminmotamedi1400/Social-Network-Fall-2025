@@ -30,7 +30,6 @@ layout: default
         <!-- Instructors Section -->
         <div class="instructors-section">
             <h2 class="section-title">
-                <span class="title-icon">👨‍🏫</span>
                 Instructors
             </h2>
             <div class="team-grid instructors-grid">
@@ -85,7 +84,6 @@ layout: default
         <!-- Teaching Assistants Section -->
         <div class="tas-section">
             <h2 class="section-title">
-                <span class="title-icon">👥</span>
                 Teaching Assistants
             </h2>
             
@@ -270,7 +268,7 @@ layout: default
 .member-image-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 100%; /* 1:1 Aspect Ratio */
+    padding-bottom: 75%; /* 4:3 Aspect Ratio for better mobile display */
     overflow: hidden;
     background: #f8f9fa;
 }
@@ -313,11 +311,6 @@ layout: default
     display: flex;
     gap: 1rem;
     align-items: center;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
 }
 
 .social-link {
@@ -379,6 +372,7 @@ layout: default
     text-transform: uppercase;
     letter-spacing: 0.5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
 /* Member Info */
@@ -403,9 +397,22 @@ layout: default
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .instructors-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        max-width: none;
+    }
+    
+    .chief-tas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        max-width: none;
+    }
+    
+    .regular-tas-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+    
     .team-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1.5rem;
     }
     
     .section-title {
@@ -416,8 +423,8 @@ layout: default
         font-size: 1.2rem;
     }
     
-    .member-image {
-        height: 160px; /* Further reduced for mobile */
+    .member-image-wrapper {
+        padding-bottom: 70%; /* Slightly smaller aspect ratio for mobile */
     }
     
     .social-links {
@@ -428,11 +435,31 @@ layout: default
         width: 35px;
         height: 35px;
     }
+    
+    .social-icon {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 @media (max-width: 480px) {
-    .member-image {
-        height: 140px; /* Even smaller for very small screens */
+    .instructors-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .chief-tas-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .regular-tas-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .member-image-wrapper {
+        padding-bottom: 65%; /* Even more compact for very small screens */
     }
     
     .member-info {
@@ -440,7 +467,40 @@ layout: default
     }
     
     .member-name {
-        font-size: 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .member-role {
+        font-size: 0.8rem;
+    }
+    
+    .social-link {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .social-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .chief-badge {
+        font-size: 0.6rem;
+        padding: 3px 6px;
+        top: 8px;
+        right: 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    .instructors-grid,
+    .chief-tas-grid,
+    .regular-tas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-image-wrapper {
+        padding-bottom: 60%;
     }
 }
 </style>
