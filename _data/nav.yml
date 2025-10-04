@@ -19,6 +19,6 @@ items:
 #   name: ASSIGNMENT 1
 #   icon_class: fas fa-user-graduate
 
-# - url: /materials/
-#   name: Materials
-#   icon_class: fas fa-book
+- url: /materials/
+  name: Materials
+  icon_class: fas fa-book
