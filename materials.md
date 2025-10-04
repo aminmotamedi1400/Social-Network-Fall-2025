@@ -32,10 +32,9 @@ permalink: /materials/
 </style>
 
 <div class="book-covers">
-    <img src="/_images/book1.jpg" alt="Social Network Analysis" class="book-cover">
-    <img src="/_images/book2.jpg" alt="Network Science" class="book-cover">
-    <img src="/_images/book3.jpg" alt="Network Science" class="book-cover">
-
+    <img src="{{ site.baseurl }}/_images/book1.jpg" alt="Social Network Analysis" class="book-cover">
+    <img src="{{ site.baseurl }}/_images/book2.jpg" alt="Network Science" class="book-cover">
+    <img src="{{ site.baseurl }}/_images/book3.jpg" alt="Network Science" class="book-cover">
 </div>
 
 ## Books
