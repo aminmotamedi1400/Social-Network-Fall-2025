@@ -3,10 +3,38 @@ layout: page
 title: Materials
 permalink: /materials/
 ---
+<style>
+.book-covers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
 
-<div class="materials-header">
-    {% include image.html url="/_images/cove3.jpg" width=175 align="right" %}
-    {% include image.html url="/_images/cover2.jpg" width=175 align="right" %}
+.book-cover {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.book-cover:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .book-cover {
+        width: 120px;
+    }
+}
+</style>
+
+<div class="book-covers">
+    <img src="/_images/book1.jpg" alt="Social Network Analysis" class="book-cover">
+    <img src="/_images/book2.jpg" alt="Network Science" class="book-cover">
+    <img src="/_images/book3.jpg" alt="Network Science" class="book-cover">
 
 </div>
 
