@@ -88,7 +88,6 @@ layout: default
             {% assign chief_tas = site.data.people.teaching_assistants | where: "role", "Chief TA" %}
             {% if chief_tas.size > 0 %}
             <div class="chief-tas-container">
-                <h3 class="subsection-title">Chief Teaching Assistants</h3>
                 <div class="team-grid chief-tas-grid">
                     {% for ta in chief_tas %}
                     <div class="team-member-card chief-ta-card">
@@ -126,6 +125,16 @@ layout: default
                         <div class="member-info">
                             <h3 class="member-name">{{ta.name}}</h3>
                             <p class="member-role">{{ta.role}}</p>
+                            {% if ta.assignments and ta.assignments.size > 0 %}
+                            <div class="assignments-list">
+                                {% for assignment in ta.assignments %}
+                                <a href="{{ assignment.link }}" class="assignment-link" target="_blank">
+                                    <span class="assignment-number">{{ assignment.number }}</span>
+                                    <span class="assignment-title">{{ assignment.title }}</span>
+                                </a>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                     {% endfor %}
@@ -137,7 +146,6 @@ layout: default
             {% assign regular_tas = site.data.people.teaching_assistants | where: "role", "TA" %}
             {% if regular_tas.size > 0 %}
             <div class="regular-tas-container">
-                <h3 class="subsection-title">Teaching Assistants</h3>
                 <div class="team-grid regular-tas-grid">
                     {% for ta in regular_tas %}
                     <div class="team-member-card ta-card">
@@ -174,6 +182,16 @@ layout: default
                         <div class="member-info">
                             <h3 class="member-name">{{ta.name}}</h3>
                             <p class="member-role">Teaching Assistant</p>
+                            {% if ta.assignments and ta.assignments.size > 0 %}
+                            <div class="assignments-list">
+                                {% for assignment in ta.assignments %}
+                                <a href="{{ assignment.link }}" class="assignment-link" target="_blank">
+                                    <span class="assignment-number">{{ assignment.number }}</span>
+                                    <span class="assignment-title">{{ assignment.title }}</span>
+                                </a>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                     {% endfor %}
@@ -265,7 +283,7 @@ layout: default
 .member-image-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 75%; /* 4:3 Aspect Ratio for better mobile display */
+    padding-bottom: 75%;
     overflow: hidden;
     background: #f8f9fa;
 }
@@ -372,132 +390,163 @@ layout: default
     z-index: 2;
 }
 
-/* Member Info */
+/* Member Info - با سایز کوچکتر و متعادل‌تر */
 .member-info {
-    padding: 1.2rem;
+    padding: 1rem;
     text-align: center;
 }
 
 .member-name {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.3rem 0;
     color: #2c3e50;
+    line-height: 1.3;
 }
 
 .member-role {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     color: #7f8c8d;
-    margin: 0;
+    margin: 0 0 0.6rem 0;
     font-weight: 500;
 }
 
-/* Responsive Design */
+/* Assignment Links - کوچکتر و فشرده‌تر */
+.assignments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.assignment-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-left: 2px solid #007bff;
+}
+
+.assignment-link:hover {
+    background: #e9ecef;
+    border-left-color: #0056b3;
+    transform: translateX(2px);
+}
+
+.assignment-number {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #007bff;
+    background: white;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    min-width: 36px;
+    text-align: center;
+}
+
+.assignment-title {
+    font-size: 0.7rem;
+    color: #495057;
+    font-weight: 500;
+    line-height: 1.2;
+    flex: 1;
+}
+
+.assignment-link:hover .assignment-number {
+    background: #007bff;
+    color: white;
+}
+
+.assignment-link:hover .assignment-title {
+    color: #212529;
+}
+
+/* Responsive Design for Assignments */
 @media (max-width: 768px) {
-    .instructors-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        max-width: none;
+    .member-name {
+        font-size: 0.9rem;
     }
     
-    .chief-tas-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        max-width: none;
+    .member-role {
+        font-size: 0.7rem;
     }
     
-    .regular-tas-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    .assignments-list {
+        gap: 0.35rem;
     }
     
-    .team-grid {
-        gap: 1.5rem;
+    .assignment-link {
+        padding: 0.35rem 0.5rem;
     }
     
-    .section-title {
-        font-size: 1.5rem;
+    .assignment-number {
+        font-size: 0.65rem;
+        padding: 0.12rem 0.35rem;
+        min-width: 32px;
     }
     
-    .subsection-title {
-        font-size: 1.2rem;
-    }
-    
-    .member-image-wrapper {
-        padding-bottom: 70%; /* Slightly smaller aspect ratio for mobile */
-    }
-    
-    .social-links {
-        gap: 0.8rem;
-    }
-    
-    .social-link {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .social-icon {
-        width: 18px;
-        height: 18px;
+    .assignment-title {
+        font-size: 0.65rem;
     }
 }
 
 @media (max-width: 480px) {
-    .instructors-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-    
-    .chief-tas-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-    
-    .regular-tas-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-    
-    .member-image-wrapper {
-        padding-bottom: 65%; /* Even more compact for very small screens */
-    }
-    
-    .member-info {
-        padding: 1rem;
-    }
-    
     .member-name {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
     
     .member-role {
-        font-size: 0.8rem;
+        font-size: 0.65rem;
     }
     
-    .social-link {
-        width: 32px;
-        height: 32px;
+    .assignment-link {
+        padding: 0.3rem 0.45rem;
+        gap: 0.4rem;
     }
     
-    .social-icon {
-        width: 16px;
-        height: 16px;
-    }
-    
-    .chief-badge {
+    .assignment-number {
         font-size: 0.6rem;
-        padding: 3px 6px;
-        top: 8px;
-        right: 8px;
+        padding: 0.1rem 0.3rem;
+        min-width: 30px;
+    }
+    
+    .assignment-title {
+        font-size: 0.6rem;
     }
 }
 
 @media (max-width: 320px) {
-    .instructors-grid,
-    .chief-tas-grid,
-    .regular-tas-grid {
-        grid-template-columns: 1fr;
+    .member-name {
+        font-size: 0.8rem;
     }
     
-    .member-image-wrapper {
-        padding-bottom: 60%;
+    .member-role {
+        font-size: 0.6rem;
+    }
+    
+    .assignments-list {
+        gap: 0.3rem;
+    }
+    
+    .assignment-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        padding: 0.3rem 0.4rem;
+    }
+    
+    .assignment-number {
+        font-size: 0.55rem;
+    }
+    
+    .assignment-title {
+        font-size: 0.55rem;
     }
 }
 </style>

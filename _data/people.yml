@@ -13,6 +13,10 @@ teaching_assistants:
     github: https://github.com/farzadjannati
     linkedin: https://www.linkedin.com/in/farzadjannati
     email: farzadjnty@gmail.com
+    assignments:
+      - number: "HW1"
+        title: "Random Graph"
+        link: "/assignments/01_assignment/"
  
 
   - name: Faezeh Mozaffari
@@ -21,6 +25,25 @@ teaching_assistants:
     github: https://github.com/faezehmzf
     linkedin: https://linkedin.com/in/faezeh-mozaffari-7816b6230
     email: faezeh.m7899@gmail.com
+    assignments:
+      - number: "HW1"
+        title: "Random Graph"
+        link: "/assignments/01_assignment/"
+
+
+  - name: Omid Moollaei
+    profile_pic: /_images/pp/Omid.png
+    role: "TA"
+    github: https://github.com/omidmollaei
+    linkedin: https://linkedin.com/in/omid-mollaei-4670b4222
+    email: mollaei.om@gmail.com
+    assignments:
+      - number: "HW2"
+        title: "Centrality Measures"
+        link: "/assignments/02_assignment/"
+      - number: "HW3"
+        title: "Structural Balance & Weak Ties"
+        link: "/assignments/03_assignment/"
 
 
   - name: Alireza Koohzad
@@ -29,20 +52,14 @@ teaching_assistants:
     github: https://github.com/Alireza-Koohzad
     linkedin: https://linkedin.com/in/alireza-koohzad-81b667217
     email: alirezakoohzad2705@gmail.com
+    assignments:
+      - number: "HW2"
+        title: "Centrality Measures"
+        link: "/assignments/02_assignment/"
+      - number: "HW3"
+        title: "Structural Balance & Weak Ties"
+        link: "/assignments/03_assignment/"
 
-  - name: Amir Hossein Roshandel
-    profile_pic: /_images/pp/Roshandel.jpg
-    role: "TA"
-    github: https://github.com/roshandelamirhossein
-    linkedin: https://www.linkedin.com/in/amir-hossein-roshandel-0ab09a138/
-    email: roshandel2004@gmail.com
-
-  - name: Omid Moollaei
-    profile_pic: /_images/pp/Omid.png
-    role: "TA"
-    github: https://github.com/omidmollaei
-    linkedin: https://linkedin.com/in/omid-mollaei-4670b4222
-    email: mollaei.om@gmail.com
 
   - name: Amin Motamedi
     profile_pic: /_images/pp/Amin.jpg
@@ -50,5 +67,19 @@ teaching_assistants:
     github: https://github.com/aminmotamedi1400
     linkedin: https://linkedin.com/in/m-amin-motamedi
     email: aminmotamedi101@gmail.com
+    assignments:
+      - number: "HW4"
+        title: "Affiliation Networks & Community Detection"
+        link: "/assignments/04_assignment/"
 
-    
+
+  - name: Amir Hossein Roshandel
+    profile_pic: /_images/pp/Roshandel.jpg
+    role: "TA"
+    github: https://github.com/roshandelamirhossein
+    linkedin: https://www.linkedin.com/in/amir-hossein-roshandel-0ab09a138/
+    email: roshandel2004@gmail.com
+    assignments:
+      - number: "HW4"
+        title: "Affiliation Networks & Community Detection"
+        link: "/assignments/04_assignment/"
