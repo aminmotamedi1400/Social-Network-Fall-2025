@@ -20,7 +20,10 @@
 
   <title>{% if page.title %} {{ page.title }} - {{ site.course_name }} / {{ site.course_semester }} {% else %}{{ site.course_name }} / {{ site.course_semester }} - {{ site.schoolname }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ page.title }} - {{ site.course_name }} / {{ site.course_semester }}{% endif %}">
-  
+  <meta name="keywords" content="social network ut">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
   <link rel="stylesheet" href="{{ "/_css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.course_name }} / {{ site.course_semester }} - {{ site.schoolname }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />

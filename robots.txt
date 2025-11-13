@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://socialnetworkut.ir/sitemap.xml
