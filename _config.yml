@@ -34,7 +34,7 @@ collections:
         permalink: lectures/:year/:month/:title
     assignments:
         output: true
-        permalink: assignments/:year/:month/:title
+        permalink: assignments/:title
     announcements:
         output: false
 
