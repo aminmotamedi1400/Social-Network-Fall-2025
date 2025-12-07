@@ -16,7 +16,7 @@ teaching_assistants:
     assignments:
       - number: "HW1"
         title: "Random Graph"
-        link: "/assignments/01_assignment/"
+        link: "/assignments/01_assignment"
  
 
   - name: Faezeh Mozaffari
@@ -28,7 +28,7 @@ teaching_assistants:
     assignments:
       - number: "HW1"
         title: "Random Graph"
-        link: "/assignments/01_assignment/"
+        link: "/assignments/01_assignment"
 
 
   - name: Omid Moollaei
